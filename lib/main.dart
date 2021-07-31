@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: '/',
+        initialRoute: '/home',
         getPages: [
           GetPage(name: '/', page: () => SplashScreen()),
           GetPage(name: '/home', page: () => HomeView()),
