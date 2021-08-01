@@ -15,13 +15,9 @@ class ApiReq extends GetxController{
   };
  
 
-  
-  void onInit()  {
-   fetchWallpapers();
-    super.onInit();
-  }
-   Future fetchWallpapers() async {
-    var wallpapers = await HttpServices.fetchWallpapers();
+ 
+   Future fetchWallpapers(String cat) async {
+    var wallpapers = await HttpServices.fetchWallpapers(cat);
     if (wallpapers != null) {
       wallpaerlist.assignAll(wallpapers);
     }
